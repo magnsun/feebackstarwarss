@@ -22,14 +22,9 @@ app.use((req, res, next) => {
 });
 
 
-app.use(express.static(path.join(__dirname, 'Webconllet')));
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Webconllet', 'Index.html'));
-});
-
 app.get('/starwars',starwarscontroller.getStarwars);
 app.get('/starwars-form', starwarscontroller.getStarwarsFrom);
+app.post('/starwars', starwarscontroller.addStarwars);
 
 
 //Error handling

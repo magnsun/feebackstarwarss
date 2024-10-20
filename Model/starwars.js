@@ -10,3 +10,7 @@ let Starwars =[
 exports.getStarwarsData = ()=>{
     return Starwars;
 }
+
+exports.saveStarwarsData =(newData) =>{
+    Starwars = newData;
+}
